@@ -38,24 +38,6 @@ initialize.problem(3)
 is.applicable = function (state,action,problem){
   result = FALSE
   
-  currentPos = problem$mapa[state[2],state[1]]
-  if(action=="u" && state[1]!=1) {
-    nextPos=problem$mapa[state[2],state[1]-1]
-    result=(substring(nextPos,2,2)!="3" && substring(currentPos,1,1)!=substring(nextPos,1,1))
-  }
-  if(action=="r" && state[2]!=7) {
-    nextPos=problem$mapa[state[2]+1,state[1]]
-    result=(substring(nextPos,2,2)!="4" && substring(currentPos,1,1)!=substring(nextPos,1,1))
-  }
-  if(action=="d" && state[1]!=7) {
-    nextPos=problem$mapa[state[2],state[1]+1]
-    result=(substring(nextPos,2,2)!="1" && substring(currentPos,1,1)!=substring(nextPos,1,1))
-  }
-  if(action=="l" && state[2]!=1) {
-    nextPos=problem$mapa[state[2]-1,state[1]]
-    result=(substring(nextPos,2,2)!="2" && substring(currentPos,1,1)!=substring(nextPos,1,1))
-  }
-  
   return(result)
 }
 
@@ -63,19 +45,6 @@ is.applicable = function (state,action,problem){
 # Must return the state resulting on applying the action over the state
 effect = function (state,action){
   result = state
-  if(action=="u"){
-    state[1]=state[1]-1
-  }
-  if(action=="r"){
-    state[2]=state[2]+1
-  }
-  if(action=="d"){
-    state[1]=state[1]+1
-  }
-  if(action=="l"){
-    state[2]=state[2]-1
-  }
-  
   # <insert code here in order to modify the resulting state> 
   return(result)
 }
