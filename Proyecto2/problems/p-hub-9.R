@@ -20,16 +20,17 @@
 # This function must return a list with the information needed to 
 # solve the problem.
 # (Depending on the problem, it should receive or not parameters)
-initialize.problem = function(){
+initialize.problem = function(P){
   problem = list()
-  problem$state.initial = c(7,1)
-  #problem$state.final   = c(1,7)
-  #problem$actions.possible = data.frame(action=c("u","r","d","l"), stringsAsFactors = F)   # u= up | r = rigth ....
+#Aqui eligo los dos principales aleatorios para empesar lel
+  problem$state.initial = c(4,18)
   problem$name = "PHub40"
-  problem$mapa = read.csv("../data/AP40.txt", header = F, skip=42, dec = ".", sep = " ")
+  problem$mapa = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
+  problem$P = P
   return(problem)
 }
-initialize.problem()
+#Le paso el numero de aeropueropuertos principales
+initialize.problem(3)
 
 # =======================================================================
 # Must return TRUE or FALSE according with if the action can be done or not
