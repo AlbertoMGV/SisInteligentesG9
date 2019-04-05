@@ -20,23 +20,24 @@
 # This function must return a list with the information needed to 
 # solve the problem.
 # (Depending on the problem, it should receive or not parameters)
-initialize.problem = function(P){
+initialize.problem = function(Pnum){
   problem = list()
 #Aqui eligo los dos principales aleatorios para empesar lel
-  problem$state.initial = c(4,18)
+  problem$state.initial = c(4,10)
   problem$name = "PHub40"
   problem$mapa = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
-  problem$P = P
+  problem$Pnum = Pnum
   return(problem)
 }
 #Le paso el numero de aeropueropuertos principales
-initialize.problem(3)
-
+problema = initialize.problem(3)
+print(problem$mapa[problem$state.initial[1],problem$state.initial[2]])
 # =======================================================================
 # Must return TRUE or FALSE according with if the action can be done or not
 # over the specific state
 is.applicable = function (state,action,problem){
   result = FALSE
+  #
   
   return(result)
 }
@@ -76,5 +77,7 @@ get.cost = function (action,state){
 # (Used for Informed Algorithms)
 # Heuristic function used in Informed algorithms
 get.evaluation = function(state,problem){
+  
+  
 	return(1)
 }
