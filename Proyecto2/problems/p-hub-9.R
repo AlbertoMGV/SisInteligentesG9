@@ -23,15 +23,17 @@
 initialize.problem = function(Pnum){
   problem = list()
 #Aqui eligo los dos principales aleatorios para empesar lel
-  problem$state.initial = c(4,10)
+  problem$state.initial = c(5,15)
   problem$name = "PHub40"
   problem$mapa = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
   problem$Pnum = Pnum
   return(problem)
 }
 #Le paso el numero de aeropueropuertos principales
-problema = initialize.problem(3)
+problem = initialize.problem(3)
 print(problem$mapa[problem$state.initial[1],problem$state.initial[2]])
+print(problem$state.initial[1])
+print(problem$state.initial[2])
 # =======================================================================
 # Must return TRUE or FALSE according with if the action can be done or not
 # over the specific state
