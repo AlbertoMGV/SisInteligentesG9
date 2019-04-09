@@ -23,17 +23,20 @@
 initialize.problem = function(Pnum){
   problem = list()
 #Aqui eligo los dos principales aleatorios para empesar lel
-  problem$state.initial = c(5,15)
-  problem$name = "PHub40"
-  problem$mapa = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
+  problem$state.initial = c(5,7)
+  problem$name = "PHub10"
+  problem$aeropuertos = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
   problem$Pnum = Pnum
   return(problem)
 }
 #Le paso el numero de aeropueropuertos principales
 problem = initialize.problem(3)
-print(problem$mapa[problem$state.initial[1],problem$state.initial[2]])
+print(problem$aeropuertos[problem$state.initial[1],problem$state.initial[2]])
 print(problem$state.initial[1])
 print(problem$state.initial[2])
+print(problem$aeropuertos[1])
+
+
 # =======================================================================
 # Must return TRUE or FALSE according with if the action can be done or not
 # over the specific state
@@ -71,7 +74,7 @@ to.string = function (state){
 # =======================================================================
 # Return the cost of applying an action over a state
 get.cost = function (action,state){
-  # Return the cost of applying an action over a state
+  # Toda accion tendra como coste 1
   return(1)
 }
 
@@ -79,7 +82,18 @@ get.cost = function (action,state){
 # (Used for Informed Algorithms)
 # Heuristic function used in Informed algorithms
 get.evaluation = function(state,problem){
+  aPorts=c()
+  bPorts=c()
   
+  for (airP in 1:10) {
+    if (airP!=state[1]&&airP!=state[2]) {
+      if(problem$aeropuertos[problem$state.initial[airP],problem$state.initial[1]]<problem$aeropuertos[problem$state.initial[airP],problem$state.initial[2]]){
+        aPorts.add(airP)
+      } else {
+        bPorts.add(airP)
+      }
+    }
+  }
   
 	return(1)
 }
