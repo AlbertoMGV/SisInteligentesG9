@@ -6,49 +6,49 @@
 # =======================================================================
 
 
-Breadth.First.Search = function(problem,
+Hill.Climbing.Busqueda = function(problem,
                                 count.limit=100, 
                                 count.print = 100, 
                                 trace = FALSE, 
                                 graph.search = FALSE){
   
-  # Initialization
+  # Inisialiso
   name.method = paste0("Hill Climbing", ifelse(graph.search," + GS",""))
   state.initial    = problem$state.initial
   state.final      = problem$state.final
   actions.possible = problem$actions.possible
   initialNode.evaluation = get.evaluation(state.initial, problem)
   
-  # Node with the initial problem state
+  # Primer nodo con el estado inicial
   node = list(parent=c(),
               state=state.initial,
               actions=c(),
               depth=0,
               cost=0,
               evaluation=initialNode.evaluation)
-  # The frontier is a list of nodes, at the beginning with the initial node
+  # Creo el frontier donde metere los nodes 
   frontier = list(node)
   
-  # If search is enable, there is an expanded list
+  # Expande la lista
   if (graph.search){
     expanded = list()     
   }
   count = 1
   end.reason = 0
-  # Describing a report
+  # No se que hase xd
   report = data.frame(iteration=numeric(),
                       nodes.frontier=numeric(),
                       depth.of.expanded=numeric(),
                       nodes.added.frontier=numeric())
   
-  # This is the juicy part
+  #El bucle con todas las iteraciones que definimos antes
   while (count<=count.limit){
-    # Print every nth time (where n is count.print)
+    # Printeo cada 100 vueltas pa ver como va la cosa
     if (count%%count.print==0){
       print(paste0("Count: ",count,", Nodes in the frontier: ",length(frontier)), quote = F)
     }
     
-    # Frontier empty, no nodes
+    # Si el frontier esta vacio significa que he encotrado la "solucion"
     if (length(frontier)==0){
       end.reason = "Solution"
       break

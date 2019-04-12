@@ -47,6 +47,6 @@ source("../methods/Plot Results.R")
 # =======================================================================
 # Solving of the problem (you have to adapt it)
 problem   = initialize.problem(2)
-res = Breadth.First.Search(problem, graph.search = T)
+res = Hill.Climbing.Busqueda(problem, graph.search = T)
 all = list(res)
 analyze.results(list(res),problem)

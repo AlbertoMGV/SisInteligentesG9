@@ -31,7 +31,7 @@ initialize.problem = function(Pnum){
   return(problem)
 }
 #Le paso el numero de aeropueropuertos principales
-problem = initialize.problem(3)
+problem = initialize.problem(2)
 print(problem$aeropuertos[problem$state.initial[1],problem$state.initial[2]])
 print(problem$state.initial[1])
 print(problem$state.initial[2])
