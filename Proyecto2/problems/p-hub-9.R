@@ -44,6 +44,7 @@ print(length(problem$aeropuertos))
 # Must return TRUE or FALSE according with if the action can be done or not
 # over the specific state
 is.applicable = function (state,action,problem){
+  #La unica comprobacion que hago es que no sean el mismo aeropuerto principal
   result = FALSE
   if (state[1]!=state[2]) {
     result= TRUE
@@ -54,6 +55,8 @@ is.applicable = function (state,action,problem){
 # =======================================================================
 # Must return the state resulting on applying the action over the state
 effect = function (state,action){
+  #Unicamente hago que se cambie el aeropuerto B, como nos dijiste en clase 
+  #para que fuese mas corto el problem <3
   result = state
   result[2]=action
   return(result)

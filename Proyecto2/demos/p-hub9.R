@@ -30,9 +30,10 @@ library(ggplot2)
 library(gridExtra)
 
 # ADDITIONAL FUNCTIONS (add any used method/problem here)
-source("../problems/problem template.R")
+source("../problems/p-hub-9.R")
 source("../methods/Breadth First Search.R")
 source("../methods/Depth First Search.R")
+source("../methods/hill-climbing-9.R")
 
 # And here, there are additional (needed) functions
 source("../methods/Expand Node.R")
@@ -45,8 +46,7 @@ source("../methods/Plot Results.R")
 
 # =======================================================================
 # Solving of the problem (you have to adapt it)
-problem   = initialize.problem()
-res1 = Breadth.First.Search(problem, graph.search = T)
-res2 = Depth.First.Search(problem, graph.search = T)
-all = list(res1, res2)
-analyze.results(list(res1,res2),problem)
+problem   = initialize.problem(2)
+res = Breadth.First.Search(problem, graph.search = T)
+all = list(res)
+analyze.results(list(res),problem)
