@@ -26,17 +26,11 @@ initialize.problem = function(Pnum){
   problem$state.initial = c(5,7)
   problem$name = "PHub10"
   problem$aeropuertos = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
-  problem$actions.possible = data.frame(action=c(1:10), stringsAsFactors = F)
+  problem$actions.possible = data.frame(action=c(1:10))
   problem$Pnum = Pnum
   return(problem)
 }
 #Le paso el numero de aeropueropuertos principales
-problem = initialize.problem(2)
-print(problem$aeropuertos[problem$state.initial[1],problem$state.initial[2]])
-print(problem$state.initial[1])
-print(problem$state.initial[2])
-print(problem$aeropuertos[1])
-print(length(problem$aeropuertos))
 
 
 
@@ -95,10 +89,10 @@ get.evaluation = function(state,problem){
   #SEPARO LOS AEROPUERTOS POR CERCANIA CON LOS PRINCIPALES
   for (airP in 1:10) {
     if (airP!=state[1]&&airP!=state[2]) {
-      if(problem$aeropuertos[state[airP],state[1]]<problem$aeropuertos[state[airP],state[2]]){
-        aPorts = list.append(aPorts,airP)
+      if(problem$aeropuertos[state[airP],state[1]]<=problem$aeropuertos[state[airP],state[2]]){
+        aPorts = c(aPorts,airP)
       } else {
-        bPorts = list.append(bPorts,airP)
+        bPorts = c(bPorts,airP)
       }
     }
   }
