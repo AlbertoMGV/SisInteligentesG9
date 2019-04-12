@@ -17,15 +17,13 @@ Hill.Climbing.Busqueda = function(problem,
   state.initial    = problem$state.initial
   state.final      = problem$state.final
   actions.possible = problem$actions.possible
-  initialNode.evaluation = get.evaluation(state.initial, problem)
-  
+
   # Primer nodo con el estado inicial
   node = list(parent=c(),
               state=state.initial,
               actions=c(),
               depth=0,
-              cost=0,
-              evaluation=initialNode.evaluation)
+              cost=0)
   # Creo el frontier donde metere los nodes 
   frontier = list(node)
   
@@ -123,7 +121,8 @@ Hill.Climbing.Busqueda = function(problem,
     }
     
     # When finished adding nodes, sort by evaluation
-    frontier <- frontier[order(evaluation)]
+    #frontier <- frontier[order(evaluation)]
+    print(paste0("frontier: ", frontier))
     
     report = rbind(report,
                    data.frame(iteration = count,
