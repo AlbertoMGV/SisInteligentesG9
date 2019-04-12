@@ -90,13 +90,15 @@ get.evaluation = function(state,problem){
   #SEPARO LOS AEROPUERTOS POR CERCANIA CON LOS PRINCIPALES
   for (airP in 1:40) {
     if (airP!=state[1]&&airP!=state[2]) {
-      #problem$aeropuertos[state[airP],state[1]]<=problem$aeropuertos[state[airP],state[2]]
+      
       print(problem$aeropuertos[state[airP],state[1]])
       print(problem$aeropuertos[state[airP],state[2]])
       
       if(problem$aeropuertos[state[airP],state[1]]<problem$aeropuertos[state[airP],state[2]]){
+        print("AeroP añadido a la lista de A")
         aPorts = c(aPorts,airP)
       } else {
+        print("AeroP añadido a la lista de B")
         bPorts = c(bPorts,airP)
       }
     }
