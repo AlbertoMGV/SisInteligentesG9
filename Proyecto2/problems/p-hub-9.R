@@ -55,7 +55,7 @@ is.applicable = function (state,action,problem){
 # Must return the state resulting on applying the action over the state
 effect = function (state,action){
   result = state
-  # <insert code here in order to modify the resulting state> 
+  result[2]=action
   return(result)
 }
 
