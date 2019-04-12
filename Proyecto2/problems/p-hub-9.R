@@ -82,18 +82,49 @@ get.cost = function (action,state){
 # (Used for Informed Algorithms)
 # Heuristic function used in Informed algorithms
 get.evaluation = function(state,problem){
-  aPorts=c()
-  bPorts=c()
-  
+  total=0
+  aPorts=list()
+  bPorts=list()
+  #SEPARO LOS AEROPUERTOS POR CERCANIA CON LOS PRINCIPALES
   for (airP in 1:10) {
     if (airP!=state[1]&&airP!=state[2]) {
-      if(problem$aeropuertos[problem$state.initial[airP],problem$state.initial[1]]<problem$aeropuertos[problem$state.initial[airP],problem$state.initial[2]]){
-        aPorts.add(airP)
+      if(problem$aeropuertos[state[airP],state[1]]<problem$aeropuertos[state[airP],state[2]]){
+        aPorts = list.append(aPorts,airP)
       } else {
-        bPorts.add(airP)
+        bPorts = list.append(bPorts,airP)
       }
     }
   }
+  #HAGO DE A A TODOS LOS Bs
+  for (airA in aPorts) {
+    for (airB in bPorts) {
+      total = total + problem$aeropuertos[airA,state[1]] + problem$aeropuertos[state[1],state[2]] + problem$aeropuertos[state[1],airB]
+    }
+  }
+  #HAGO DE A A TODOS LOS As [No esta del todo bien por que duplica vuelos]
+  for (airA in aPorts) {
+    for (airA2 in aPorts) {
+      if (airA2!=airA) {
+        total = total + problem$aeropuertos[airA,state[1]] + problem$aeropuertos[state[1],airA2]
+      }
+    }
+  }
+  #HAGO DE B A TODOS LOS Bs [No esta del todo bien por que duplica vuelos]
+  for (airB in bPorts) {
+    for (airB2 in bPorts) {
+      if (airB2!=airB) {
+        total = total + problem$aeropuertos[airB,state[1]] + problem$aeropuertos[state[1],airB2]
+      }
+    }
+  }
+  #HAGO DE TODOS LOS As AL PRIMER PRINCIPAL Y AL SEGUNDO PRINCI
+  for (airA in aPorts) {
+    total = total + (problem$aeropuertos[airA,state[1]]*2)+problem$aeropuertos[state[1],state[2]]
+  }
+  #HAGO DE TODOS LOS Bs AL SEGUNDO PRINCI Y AL PRIMERO PRINCI
+  for (airB in bPorts) {
+    total = total + (problem$aeropuertos[airB,state[2]]*2)+problem$aeropuertos[state[2],state[1]]
+  }
   
-	return(1)
+  return(total)
 }
