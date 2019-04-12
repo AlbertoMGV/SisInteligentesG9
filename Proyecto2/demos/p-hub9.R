@@ -31,8 +31,6 @@ library(gridExtra)
 
 # ADDITIONAL FUNCTIONS (add any used method/problem here)
 source("../problems/p-hub-9.R")
-source("../methods/Breadth First Search.R")
-source("../methods/Depth First Search.R")
 source("../methods/hill-climbing-9.R")
 
 # And here, there are additional (needed) functions
@@ -47,6 +45,6 @@ source("../methods/Plot Results.R")
 # =======================================================================
 # Solving of the problem (you have to adapt it)
 problem   = initialize.problem(2)
-res = Hill.Climbing.Busqueda(problem, graph.search = T)
+res = Hill.Climbing.Busqueda(problem, 200, 200, TRUE, TRUE)
 all = list(res)
 analyze.results(list(res),problem)

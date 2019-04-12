@@ -23,13 +23,14 @@
 initialize.problem = function(Pnum){
   problem = list()
 #Aqui eligo los dos principales aleatorios para empesar lel
-  problem$state.initial = c(5,7)
-  problem$name = "PHub10"
-  problem$aeropuertos = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
-  problem$actions.possible = data.frame(action=c(1:10))
+  problem$state.initial = c(3,8)
+  problem$name = "PHub40"
+  problem$aeropuertos = read.csv("../data/AP40.txt", header = F, skip=42, dec = ".", sep = " ")
+  problem$actions.possible = data.frame(action=c(1:40))
   problem$Pnum = Pnum
   return(problem)
 }
+
 #Le paso el numero de aeropueropuertos principales
 
 
@@ -87,9 +88,13 @@ get.evaluation = function(state,problem){
   aPorts=list()
   bPorts=list()
   #SEPARO LOS AEROPUERTOS POR CERCANIA CON LOS PRINCIPALES
-  for (airP in 1:10) {
+  for (airP in 1:40) {
     if (airP!=state[1]&&airP!=state[2]) {
-      if(problem$aeropuertos[state[airP],state[1]]<=problem$aeropuertos[state[airP],state[2]]){
+      #problem$aeropuertos[state[airP],state[1]]<=problem$aeropuertos[state[airP],state[2]]
+      print(problem$aeropuertos[state[airP],state[1]])
+      print(problem$aeropuertos[state[airP],state[2]])
+      
+      if(problem$aeropuertos[state[airP],state[1]]<problem$aeropuertos[state[airP],state[2]]){
         aPorts = c(aPorts,airP)
       } else {
         bPorts = c(bPorts,airP)
