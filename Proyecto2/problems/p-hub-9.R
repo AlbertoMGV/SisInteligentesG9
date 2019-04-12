@@ -26,6 +26,7 @@ initialize.problem = function(Pnum){
   problem$state.initial = c(5,7)
   problem$name = "PHub10"
   problem$aeropuertos = read.csv("../data/AP10.txt", header = F, skip=42, dec = ".", sep = " ")
+  problem$actions.possible = data.frame(action=c(1:10), stringsAsFactors = F)
   problem$Pnum = Pnum
   return(problem)
 }
@@ -35,6 +36,8 @@ print(problem$aeropuertos[problem$state.initial[1],problem$state.initial[2]])
 print(problem$state.initial[1])
 print(problem$state.initial[2])
 print(problem$aeropuertos[1])
+print(length(problem$aeropuertos))
+
 
 
 # =======================================================================
@@ -42,8 +45,9 @@ print(problem$aeropuertos[1])
 # over the specific state
 is.applicable = function (state,action,problem){
   result = FALSE
-  #
-  
+  if (state[1]!=state[2]) {
+    result= TRUE
+  }
   return(result)
 }
 
@@ -62,7 +66,7 @@ effect = function (state,action){
 #   could be omited
 is.final.state = function (state, finalstate=problem$state.final){
   # <insert code here in order to modify the resulting state> 
-  return(state[1]==finalstate[1] && state[2]==finalstate[2])
+  return(FALSE)
 }
 
 # =======================================================================
