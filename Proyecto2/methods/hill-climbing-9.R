@@ -33,7 +33,7 @@ Hill.Climbing.Busqueda = function(problem,
   }
   count = 1
   end.reason = 0
-  # No se que hase xd
+
   report = data.frame(iteration=numeric(),
                       nodes.frontier=numeric(),
                       depth.of.expanded=numeric(),
@@ -52,17 +52,15 @@ Hill.Climbing.Busqueda = function(problem,
       break
     }
     
-    # Take first node from the frontier and add it to the graph
+    # Pillo el primner nodo del frontier y lo meto a la grafica
     firstnode = frontier[[1]]
-    #frontier[[1]] = NULL
-    # Empty frontier
     frontier = list()
     if(graph.search){
       expanded = append(expanded,list(firstnode))
     }
     
     
-    # For debugging
+    # debuggeando 
     if (trace){
       print(" ",quote = F)
       print("------------------------------", quote = F)
@@ -71,13 +69,10 @@ Hill.Climbing.Busqueda = function(problem,
       print(paste0("(depth=",firstnode$depth,", cost=",firstnode$depth,")"),quote = F)
     }
     
-    # End if it reaches final state
     if (is.final.state(firstnode$state,state.final)){
       end.reason = "Solution"
       break
     }
-    
-    # Expand from the firstnode (function in Expand Node.R)
     newnodes = expand.node(firstnode, actions.possible)
     
     
@@ -94,16 +89,16 @@ Hill.Climbing.Busqueda = function(problem,
         }
       }
     }else{
-      # This
+
       nodes.added.frontier = 0
       if (length(newnodes)){
         for (i in 1:length(newnodes)){
           newnode = newnodes[[i]]
-          # Check every node in the frontier if its identical to the newnode
+          # Comprueba todos los nodos del frontier con el nuevo nodo
           if (!any(sapply(frontier,function (x) identical(x$state,newnode$state)))){
-            # Check every node in the expanded if its identical to the newnode
+            # Comprueba todos los nodos en el expandido al nuevo
             if (!any(sapply(expanded,function (x) identical(x$state,newnode$state)))){
-              # Add new node to the frontier
+              # Añade el nodo al frontier
               frontier = append(frontier,list(newnode))
               nodes.added.frontier = nodes.added.frontier + 1
               if (trace){
@@ -119,9 +114,7 @@ Hill.Climbing.Busqueda = function(problem,
     if(trace){
       print(paste0("Total states in the frontier: ", length(frontier)),quote = F)
     }
-    
-    # When finished adding nodes, sort by evaluation
-    #frontier <- frontier[order(evaluation)]
+
     print(paste0("frontier: ", frontier))
     
     report = rbind(report,
@@ -137,8 +130,7 @@ Hill.Climbing.Busqueda = function(problem,
   result = list()
   result$report = report
   result$name = name.method
-  
-  # Show the obtained (or not) final solution
+
   if (end.reason == "Solution"){
     print("Solution found!!", quote = F)
     to.string(firstnode$state)

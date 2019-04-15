@@ -23,7 +23,7 @@
 initialize.problem = function(Pnum){
   problem = list()
 #Aqui eligo los dos principales aleatorios para empesar lel
-  problem$state.initial = c(3,8)
+  problem$state.initial = c(12,32)
   problem$name = "PHub40"
   problem$aeropuertos = read.csv("../data/AP40.txt", header = F, skip=42, dec = ".", sep = " ")
   problem$actions.possible = data.frame(action=c(1:40))
@@ -41,7 +41,7 @@ initialize.problem = function(Pnum){
 is.applicable = function (state,action,problem){
   #La unica comprobacion que hago es que no sean el mismo aeropuerto principal
   result = FALSE
-  if (state[1]!=state[2]) {
+  if (state[1]!=action) {
     result= TRUE
   }
   return(result)
