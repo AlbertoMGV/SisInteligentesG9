@@ -7,10 +7,10 @@
 
 
 Hill.Climbing.Busqueda = function(problem,
-                                count.limit=100, 
-                                count.print = 100, 
-                                trace = FALSE, 
-                                graph.search = FALSE){
+                                count.limit=200, 
+                                count.print = 200, 
+                                trace = TRUE, 
+                                graph.search = TRUE){
   
   # Inisialiso
   name.method = paste0("Hill Climbing", ifelse(graph.search," + GS",""))
@@ -26,6 +26,7 @@ Hill.Climbing.Busqueda = function(problem,
               cost=0)
   # Creo el frontier donde metere los nodes 
   frontier = list(node)
+  
   
   # Expande la lista
   if (graph.search){
@@ -58,6 +59,7 @@ Hill.Climbing.Busqueda = function(problem,
     if(graph.search){
       expanded = append(expanded,list(firstnode))
     }
+
     
     
     # debuggeando 
@@ -137,6 +139,7 @@ Hill.Climbing.Busqueda = function(problem,
     print("Actions: ", quote = F)
     print(firstnode$actions, quote = F)
     result$state.final = firstnode
+    
   } else{
     if (end.reason == "Frontier"){
       print("Empty frontier. No sollution found", quote = F)
