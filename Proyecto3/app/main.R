@@ -20,5 +20,20 @@ library(lattice)
 
 data = read.keel("../data/baseball.dat")
 
-print(data)
+# Split the data into training and test set
+training.samples <- data$target %>% createDataPartition(p = 0.8, list = FALSE)
 
+train.data  <- data[training.samples, ]
+test.data <- data[-training.samples, ]
+# CREO MODELO LINEAL
+linear.model <- lm(target ~., data = train.data)
+#PREDICCIONES
+predictions <- linear.model %>% predict(test.data)
+#ERROR
+abs(predictions - test.data$target)
+
+data.frame( R2 = R2(predictions, test.data$target),
+            RMSE = RMSE(predictions, test.data$target),
+            MAE = MAE(predictions, test.data$target))
+
+print(data)
