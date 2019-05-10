@@ -19,32 +19,33 @@ library(ggplot2)
 library(lattice)
 
 data = read.keel("../data/baseball.dat")
-
+  
 # Split the data into training and test set
-training.samples <- createMultiFolds(y=data$Salary,k = 10, times = 5)
+folds <- createMultiFolds(y=data$Salary,k = 5, times = 1)
 
+print(folds)
 
+for(i in 1:5){
+  #Segement your data by fold using the which() function 
+  train.data  <- data[folds[[i]], ]
+  test.data <- data[-folds[[i]], ]
+  #Use the test and train data partitions however you desire...
+  
+  linear.model <- lm(Salary~., train.data)
+  prediction <- predict(linear.model, test.data)
+  abs(prediction - test.data$Salary)
+  
+  data.frame( R2 = R2(prediction, test.data$Salary),
+              RMSE = RMSE(prediction, test.data$Salary),
+              MAE = MAE(prediction, test.data$Salary))
+  
+  # Define training control
+  train.control <- trainControl(method = "cv", number = 5)
+  # Train the model
+  model <- train(Salary~., data, method = "lm",
+                 trControl = train.control)
 
-train.data  <- data[training.samples, ]
-test.data <- data[-training.samples, ]
-# CREO MODELO LINEAL
-linear.model <- lm(target ~., train.data)
-#PREDICCIONES
-predictions <- linear.model %>% predict(test.data)
-#ERROR
-abs(predictions - test.data$target)
+  print(model)
+  
+}
 
-data.frame( R2 = R2(predictions, test.data$target),
-            RMSE = RMSE(predictions, test.data$target),
-            MAE = MAE(predictions, test.data$target))
-
-# Define training control
-train.control <- trainControl(method = "cv", number = 5)
-# Train the model
-model <- train(Fertility ~., data, method = "lm",
-               trControl = train.control)
-# Summarize the results
-
-#???print(model)
-
-print(data)
