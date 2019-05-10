@@ -25,8 +25,8 @@ training.samples <- createMultiFolds(y=data$Salary,k = 10, times = 5)
 
 
 
-train.data  <- data[training.samples[[i]], ]
-test.data <- data[-training.samples[[i]], ]
+train.data  <- data[training.samples, ]
+test.data <- data[-training.samples, ]
 # CREO MODELO LINEAL
 linear.model <- lm(target ~., train.data)
 #PREDICCIONES
