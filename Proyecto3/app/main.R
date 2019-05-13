@@ -24,7 +24,7 @@ data$Salary=as.numeric(data$Salary)
 # Split the data into training and test set
 
 folds <- createMultiFolds(y = data$Salary, k = 10, times = 5)
-print(folds)
+
 for(i in 1:5){
 
   #Segement your data by fold using the which() function

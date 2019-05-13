@@ -64,7 +64,7 @@ ui <- fluidPage(
       selectInput("combobox","5. Select an attribute to predict",choices = c("Batting_average" = 1,"On.base_percentage"=2,
                                                                              "Runs"=3,"Hits"=4,"Doubles"=5,"Triples"=6,"HomeRuns"=7,"Runs_batted_in"=8,"Walks"=9,"Strike.Outs"=10,
                                                                              "Stolen_bases"=11,"Errors"=12,"Free_agency_eligibility"=13,"Free_agent"=14,"Arbitration_eligibility"=15,"Arbitration"=16,
-                                                                             "Salary"=17))
+                                                                             "Salary"))
 
 
     ),
