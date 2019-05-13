@@ -18,6 +18,8 @@ library(caret)
 library(ggplot2)
 library(lattice)
 
+err=0
+errs=c()
 data = read.keel("../data/baseball.dat")
 data$Salary=as.numeric(data$Salary)
 
@@ -35,15 +37,29 @@ for(i in 1:5){
 
   linear.model <- lm(Salary ~., train.data)
   prediction <- predict(linear.model, test.data)
+  
+  #err <- predict  - test.data$Salary
+  MAE = MAE(prediction, test.data$Salary)
+  
+  #err=abs(prediction - test.data$Salary)
+  errs = c(errs, MAE)
 
-  accuracy <-  data.frame( R2 = R2(prediction, test.data$Salary, form = "traditional"),
-                           RMSE = RMSE(prediction, test.data$Salary),
-                           MAE = MAE(prediction, test.data$Salary))
+  #accuracy <-  data.frame( R2 = R2(prediction, test.data$Salary, form = "traditional"),
+  #                         RMSE = RMSE(prediction, test.data$Salary),
+  #                         MAE = MAE(prediction, test.data$Salary))
 
-  print(accuracy)
+  #print(accuracy)
 
 
 }
+
+for (er in errs) {
+  print(er)
+  err=err+er
+}
+
+
+print(err/5)
 
 # Define training control
 #train.control <- trainControl(method = "cv", number = 5, savePredictions = "all")
