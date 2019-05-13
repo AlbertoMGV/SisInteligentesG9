@@ -13,6 +13,7 @@ server <- function(input, output) {
   library(caret)
   library(ggplot2)
   library(lattice)
+  library(plotly)
 
   output$target <- renderPlot({
     
@@ -41,11 +42,11 @@ server <- function(input, output) {
       print(er)
       err=err+er
     }
+
     
-    
-    x    <- faithful[, 2] 
-    bins <- seq(min(x), max(x), length.out = err + 1)
-    hist(x, breaks = 5, col = 'darkgray', border = 'white')
+    barplot(errs,main="Error in each Fold",
+            xlab=paste("Error medio (linea roja): ", toString(round(err/5,2))), col=c("lightblue"), ylim=c(0,32),names.arg=c("Fold 1", "Fold 2", "Fold 3", "Fold 4", "Fold 5"))
+    abline(h=err/5, col="red")
     
     
   })
