@@ -14,7 +14,7 @@ server <- function(input, output) {
   library(ggplot2)
   library(lattice)
   library(plotly)
-
+  
   output$target <- renderPlot({
     
     #TODO: Use this var for selecting Target
@@ -42,7 +42,7 @@ server <- function(input, output) {
       print(er)
       err=err+er
     }
-
+    
     
     barplot(errs,main="Error in each Fold",
             xlab=paste("Error medio (linea roja): ", toString(round(err/5,2))), col=c("lightblue"), ylim=c(0,32),names.arg=c("Fold 1", "Fold 2", "Fold 3", "Fold 4", "Fold 5"))
@@ -51,13 +51,13 @@ server <- function(input, output) {
     
   })
   output$contents <- renderTable({
-
+    
     # input$file1 will be NULL initially. After the user selects
     # and uploads a file, head of that data file by default,
     # or all rows if selected, will be shown.
-
+    
     req(input$file1)
-
+    
     # when reading semicolon separated files,
     # having a comma separator causes `read.csv` to error
     tryCatch(
@@ -69,18 +69,18 @@ server <- function(input, output) {
         stop(safeError(e))
       }
     )
-
+    
     if(input$disp == "head") {
       return(head(dat))
     }
     else {
       return(dat)
     }
-
-
+    
+    
   })
-
-
+  
+  
 
 
 }
