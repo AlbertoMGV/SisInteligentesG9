@@ -32,33 +32,19 @@ ui <- fluidPage(
        tags$hr(),
        
        # Input: Checkbox if file has header ----
-       checkboxInput("header", "Header", TRUE),
+       sliderInput(inputId = "minsplit",
+                   label = "Minsplit:",
+                   min = 1,
+                   max = 1000,
+                   value = 30),
        
-       # Input: Select separator ----
-       radioButtons("sep", "2. Separator",
-                    choices = c(Comma = ",",
-                                Semicolon = ";",
-                                Tab = "\t"),
-                    selected = ","),
+       sliderInput(inputId = "maxdepth",
+                   label = "Maxdepth:",
+                   min = 1,
+                   max = 30,
+                   value = 30),
        
-       # Input: Select quotes ----
-       radioButtons("quote", "3. Quote",
-                    choices = c(None = "",
-                                "Double Quote" = '"',
-                                "Single Quote" = "'"),
-                    selected = '"'),
-       # Horizontal line ----
-       tags$hr(),
-       
-       # Input: Select number of rows to display ----
-       radioButtons("disp", "4. Display",
-                    choices = c(Head = "head",
-                                All = "all"),
-                    selected = "head"),
-       selectInput("combobox","5. Select an attribute to predict",choices = c("Batting_average" = 1,"On.base_percentage"=2,
-                                                                              "Runs"=3,"Hits"=4,"Doubles"=5,"Triples"=6,"HomeRuns"=7,"Runs_batted_in"=8,"Walks"=9,"Strike.Outs"=10,
-                                                                              "Stolen_bases"=11,"Errors"=12,"Free_agency_eligibility"=13,"Free_agent"=14,"Arbitration_eligibility"=15,"Arbitration"=16,
-                                                                              "Salary"))
+       selectInput("combobox","CP:",choices = c(0,1))
        
        
      ),
@@ -93,7 +79,9 @@ server <- function(input, output) {
     
     err=0
     errs=c()
-    data = read.keel(input$file1$datapath)
+    data <- read.csv(file = input$file1$datapath)
+    #Eliminamos la columna Phone
+    data$Phone = NULL
     data$Salary=as.numeric(data$Salary)
     folds <- createMultiFolds(y = data$Salary, k = 10, times = 5)
     
@@ -133,7 +121,10 @@ server <- function(input, output) {
     # having a comma separator causes `read.csv` to error
     tryCatch(
       {
-        dat <- read.keel(input$file1$datapath)
+        #Leemos el archivo
+        dat <- read.csv(file = input$file1$datapath)
+        #Eliminamos la columna Phone
+        dat$Phone <- NULL
       },
       error = function(e) {
         # return a safeError if a parsing error occurs
