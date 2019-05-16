@@ -52,9 +52,8 @@ ui <- fluidPage(
      
      mainPanel(
        tabsetPanel(id = "tabs",
-                   tabPanel("Content",tableOutput("contents")),
-                   tabPanel("Target",plotOutput("target"))
-                   
+                   tabPanel("Contenido",tableOutput("contents")),
+                   tabPanel("% Aciertos",plotOutput("target"))
        )
        
      )
@@ -76,11 +75,12 @@ server <- function(input, output) {
     
     data <- read.csv(file = input$file1$datapath)
     folds <- createMultiFolds(y = data$Churn, k = 10, times = 5)
-    tasaAciertoIndi = 0
-    tasaAciertoITot = 0
+    tasaAciertoIndividual = 0
+    tasaAciertoITotal = 0
+    porcenAciertos = c()
     
     for(i in 1:5){
-      tasaAciertoIndi = 0
+      tasaAciertoIndividual = 0
       #Creamos sets de datos
       train.data  <- data[folds[[i]], ]
       test.data <- data[-folds[[i]], ]
@@ -90,17 +90,16 @@ server <- function(input, output) {
       #Predicciones
       prediction <- predict(model, test.data, type="class")
       #acciertos
-      tasaAciertoIndi = sum(prediction == test.data$Churn) / nrow(test.data)
-      tasaAciertoITot = tasaAciertoITot + tasaAciertoIndi
-      print(paste("Tasa acierto ejecucion Nº",i,": ",tasaAciertoIndi))
-      #Representacion Visual
-      rpart.plot(x=model)
+      tasaAciertoIndividual = sum(prediction == test.data$Churn) / nrow(test.data)
+      tasaAciertoITotal = tasaAciertoITotal + tasaAciertoIndividual
+      porcenAciertos = c(porcenAciertos,tasaAciertoIndividual)
+      
     }
-    print(paste("Tasa de acierto medio: ", tasaAciertoITot/5))
     
-    #barplot(errs,main="Error in each Fold",
-    #        xlab=paste("Error medio (linea roja): ", toString(round(err/5,2))), col=c("lightblue"), ylim=c(0,32),names.arg=c("Fold 1", "Fold 2", "Fold 3", "Fold 4", "Fold 5"))
-    #abline(h=err/5, col="red")
+    barplot(porcenAciertos,main="Tasa de aciertos por ejecucion", xlab=paste("Media de la tasa de aciertos (linea roja): ", toString(round(tasaAciertoITotal/5,5)),"%"), col=c("lightblue"), ylim=c(0,1),names.arg=c(paste(round(porcenAciertos[1],5),"%"),paste(round(porcenAciertos[2],5),"%"), paste(round(porcenAciertos[3],5),"%"), paste(round(porcenAciertos[4],5),"%"), paste(round(porcenAciertos[5],5),"%")))
+    abline(h=tasaAciertoITotal/5, col="red")
+    
+    rpart.plot(x=model)
     
     
   })
