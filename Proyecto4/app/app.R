@@ -64,48 +64,43 @@ ui <- fluidPage(
 
 # Define server logic required to draw a histogram
 server <- function(input, output) {
-   
-  
-  library(RKEEL)
+
+  library(rpart)
+  library(rpart.plot)
+  library(C50)
   library(caret)
-  library(ggplot2)
-  library(lattice)
-  library(plotly)
   
   output$target <- renderPlot({
     
-    #TODO: Use this var for selecting Target
-    type = input$combobox
+    #Cargamos data
     
-    err=0
-    errs=c()
     data <- read.csv(file = input$file1$datapath)
-    #Eliminamos la columna Phone
-    data$Phone = NULL
-    data$Salary=as.numeric(data$Salary)
-    folds <- createMultiFolds(y = data$Salary, k = 10, times = 5)
+    folds <- createMultiFolds(y = data$Churn, k = 10, times = 5)
+    tasaAciertoIndi = 0
+    tasaAciertoITot = 0
     
     for(i in 1:5){
+      tasaAciertoIndi = 0
+      #Creamos sets de datos
       train.data  <- data[folds[[i]], ]
       test.data <- data[-folds[[i]], ]
-      linear.model <- lm(Salary ~., train.data)
-      prediction <- predict(linear.model, test.data)
-      MAE = MAE(prediction, test.data$Salary)
-      errs = c(errs, MAE)
-      #plot(prediction)
-      #plot(linear.model,which=c(1:6))
-      #plot(linear.model)
-      #plot(prediction, test.data)
+      #Arbol de decis por cada uno
+      #TODO: Aqui tenemos que meter el min max y CP!!!
+      model <- rpart(formula=Churn~., data=train.data)
+      #Predicciones
+      prediction <- predict(model, test.data, type="class")
+      #acciertos
+      tasaAciertoIndi = sum(prediction == test.data$Churn) / nrow(test.data)
+      tasaAciertoITot = tasaAciertoITot + tasaAciertoIndi
+      print(paste("Tasa acierto ejecucion Nº",i,": ",tasaAciertoIndi))
+      #Representacion Visual
+      rpart.plot(x=model)
     }
-    for (er in errs) {
-      print(er)
-      err=err+er
-    }
+    print(paste("Tasa de acierto medio: ", tasaAciertoITot/5))
     
-    
-    barplot(errs,main="Error in each Fold",
-            xlab=paste("Error medio (linea roja): ", toString(round(err/5,2))), col=c("lightblue"), ylim=c(0,32),names.arg=c("Fold 1", "Fold 2", "Fold 3", "Fold 4", "Fold 5"))
-    abline(h=err/5, col="red")
+    #barplot(errs,main="Error in each Fold",
+    #        xlab=paste("Error medio (linea roja): ", toString(round(err/5,2))), col=c("lightblue"), ylim=c(0,32),names.arg=c("Fold 1", "Fold 2", "Fold 3", "Fold 4", "Fold 5"))
+    #abline(h=err/5, col="red")
     
     
   })
@@ -131,15 +126,7 @@ server <- function(input, output) {
         stop(safeError(e))
       }
     )
-    
-    if(input$disp == "head") {
-      return(head(dat))
-    }
-    else {
-      return(dat)
-    }
-    
-    
+    return(dat)
   })
   
   

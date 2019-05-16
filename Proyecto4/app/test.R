@@ -4,8 +4,6 @@
 # Assignment: Sistemas Inteligentes
 # Date: 27/03/2019
 # =======================================================================
-# https://www.youtube.com/watch?v=mgh4KdbYHv0
-#
 
 rm(list=ls())
 cat("\014")
