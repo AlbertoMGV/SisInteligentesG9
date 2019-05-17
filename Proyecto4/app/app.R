@@ -96,13 +96,13 @@ server <- function(input, output) {
       model <- rpart(formula=Churn~., data=train.data, method = "class", control = parametros)
       #Predicciones
       prediction <- predict(model, test.data, type="class")
+      print(confusionMatrix(prediction,test.data[["Churn"]]))
       #acciertos
       tasaAciertoIndividual = sum(prediction == test.data$Churn) / nrow(test.data)
       tasaAciertoITotal = tasaAciertoITotal + tasaAciertoIndividual
       porcenAciertos = c(porcenAciertos,tasaAciertoIndividual)
       
     }
-    
     barplot(porcenAciertos,main="Tasa de aciertos por ejecucion", xlab=paste("Media de la tasa de aciertos (linea roja): ", toString(round(tasaAciertoITotal/5,5)),"%"), col=c("lightblue"), ylim=c(0,1),names.arg=c(paste(round(porcenAciertos[1],5),"%"),paste(round(porcenAciertos[2],5),"%"), paste(round(porcenAciertos[3],5),"%"), paste(round(porcenAciertos[4],5),"%"), paste(round(porcenAciertos[5],5),"%")))
     abline(h=tasaAciertoITotal/5, col="red")
     
@@ -130,10 +130,12 @@ server <- function(input, output) {
       model <- rpart(formula=Churn~., data=train.data, method = "class", control = parametros)
       #Predicciones
       prediction <- predict(model, test.data, type="class")
+      print(confusionMatrix(prediction,test.data[["Churn"]]))
       #acciertos
       tasaAciertoIndividual = sum(prediction == test.data$Churn) / nrow(test.data)
       tasaAciertoITotal = tasaAciertoITotal + tasaAciertoIndividual
       porcenAciertos = c(porcenAciertos,tasaAciertoIndividual)
+      
       
     }
     
