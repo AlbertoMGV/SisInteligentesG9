@@ -78,6 +78,7 @@ server <- function(input, output) {
     #Cargamos data
     
     data <- read.csv(file = input$file1$datapath)
+    data$Phone <- NULL
     folds <- createMultiFolds(y = data$Churn, k = 10, times = 5)
     tasaAciertoIndividual = 0
     tasaAciertoITotal = 0
@@ -111,6 +112,7 @@ server <- function(input, output) {
     #Cargamos data
     
     data <- read.csv(file = input$file1$datapath)
+    data$Phone <- NULL
     folds <- createMultiFolds(y = data$Churn, k = 10, times = 5)
     tasaAciertoIndividual = 0
     tasaAciertoITotal = 0

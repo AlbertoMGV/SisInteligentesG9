@@ -22,6 +22,7 @@ library(caret)
 #Cargamos data
 
 data <- read.csv(file = "../data/churn.csv")
+data$Phone <- NULL
 folds <- createMultiFolds(y = data$Churn, k = 10, times = 5)
 tasaAciertoIndi = 0
 tasaAciertoITot = 0
@@ -33,7 +34,7 @@ for(i in 1:5){
   test.data <- data[-folds[[i]], ]
   #Arbol de decis por cada uno
   #TODO: Aqui tenemos que meter el min max y CP!!!
-  model <- rpart(formula=Churn~., data=train.data)
+  model <- rpart(Churn~., train.data)
   #Predicciones
   prediction <- predict(model, test.data, type="class")
   #acciertos
