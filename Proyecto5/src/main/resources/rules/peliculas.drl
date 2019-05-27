@@ -3,7 +3,15 @@ package rules
 
 //list any import classes here.
 
-
+import com.albertomgv.proyecto5.Pelicula
+import com.albertomgv.proyecto5.Pelicula.Apologia
+import com.albertomgv.proyecto5.Pelicula.Categoria
+import com.albertomgv.proyecto5.Pelicula.Conductas
+import com.albertomgv.proyecto5.Pelicula.Contenido
+import com.albertomgv.proyecto5.Pelicula.Escenas
+import com.albertomgv.proyecto5.Pelicula.Lenguaje
+import com.albertomgv.proyecto5.Pelicula.Practicas_Discri
+import com.albertomgv.proyecto5.Pelicula.Valores
 
 //declare any global variables here
 
