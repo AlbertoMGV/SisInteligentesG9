@@ -63,6 +63,18 @@ public class Pelicula {
 		ADULTOS
 	}
 	
+	public enum Clasificacion {		
+		INFANCIA,
+		TP,
+		MAYOR7,
+		MAYOR12,
+		MAYOR16,
+		MAYOR18,
+		X
+		
+	}
+	
+	
 	private String name = null;
 	private Conductas conducta=null;
 	private Practicas_Discri practica=null;
@@ -72,6 +84,7 @@ public class Pelicula {
 	private Valores valores=null;
 	private Apologia apologia=null;
 	private Categoria categoria=null;
+	private Clasificacion clasificacion=null;
 	
 	/**
 	 * @return the name
@@ -182,13 +195,24 @@ public class Pelicula {
 		this.categoria = categoria;
 	}
 	
-	@Override
-	public String toString() {
-		return "Pelicula [conducta=" + conducta + ", practica=" + practica + ", escena=" + escena + ", lenguaje="
-				+ lenguaje + ", cont=" + cont + ", valores=" + valores + ", apologia=" + apologia + ", categoria="
-				+ categoria + "]";
+	/**
+	 * @return the clasificacion
+	 */
+	public Clasificacion getClasificacion() {
+		return clasificacion;
+	}
+	/**
+	 * @param clasificacion the clasificacion to set
+	 */
+	public void setClasificacion(Clasificacion clasificacion) {
+		this.clasificacion = clasificacion;
 	}
 	
+	@Override
+	public String toString() {
+		return "Pelicula [name=" + name + ", conducta=" + conducta + ", practica=" + practica + ", escena=" + escena
+				+ ", lenguaje=" + lenguaje + ", cont=" + cont + ", valores=" + valores + ", apologia=" + apologia
+				+ ", categoria=" + categoria + ", clasificacion=" + clasificacion + "]";
+	}
 	
-
 }
