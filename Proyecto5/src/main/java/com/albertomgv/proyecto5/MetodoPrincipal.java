@@ -24,35 +24,50 @@ public class MetodoPrincipal {
 		Pelicula p1 = new Pelicula();
 		p1.setName("Tetanic");
 		p1.setEscena(Escenas.DESNUDEZ);
+		p1.setConducta(Conductas.ILEGALES);
+		p1.setPractica(Practicas_Discri.SEXUAL);
+		p1.setLenguaje(Lenguaje.HIRIENTE);
+		p1.setCont(Contenido.PERJU_DESARR_PSICO);
+		p1.setApologia(Apologia.DROGAS);
 		p1.setCategoria(Categoria.PORNOGRAFIA);
 		p1.setValores(Valores.ESTIMULA_IMAGINACION);
 		p1.setCriterios(Criterios.INICIO);
 		
 		Pelicula p2 = new Pelicula();
-		p2.setName("Tetanic");
-		p2.setEscena(Escenas.DESNUDEZ);
-		p2.setCategoria(Categoria.PORNOGRAFIA);
-		p2.setValores(Valores.ESTIMULA_IMAGINACION);
+		p2.setName("Austin Powers");
+		p2.setEscena(Escenas.DIALOG_EROTICOS);
+		p2.setPractica(Practicas_Discri.ETNICO);
+		p2.setLenguaje(Lenguaje.HIRIENTE);
+		p2.setCont(Contenido.HABITUAL_ADULTOS);
+		p2.setApologia(Apologia.DROGAS);
+		p2.setCategoria(Categoria.ADULTOS);
+		p2.setValores(Valores.SOCIALES);
 		p2.setCriterios(Criterios.INICIO);
 		
 		Pelicula p3 = new Pelicula();
-		p3.setName("Tetanic");
-		p3.setEscena(Escenas.DESNUDEZ);
-		p3.setCategoria(Categoria.PORNOGRAFIA);
-		p3.setValores(Valores.ESTIMULA_IMAGINACION);
+		p3.setName("FastandFurius");
+		p3.setEscena(Escenas.INQUIETUD);
+		p3.setLenguaje(Lenguaje.HIRIENTE);
+		p3.setCont(Contenido.FACIL_COMPRENSIBLE);
+		p3.setApologia(Apologia.VIOLENCIA);
+		p3.setCategoria(Categoria.ADULTOS);
+		p3.setValores(Valores.SOCIALES);
 		p3.setCriterios(Criterios.INICIO);
 		
 		Pelicula p4 = new Pelicula();
-		p4.setName("Tetanic");
-		p4.setEscena(Escenas.DESNUDEZ);
-		p4.setCategoria(Categoria.PORNOGRAFIA);
-		p4.setValores(Valores.ESTIMULA_IMAGINACION);
+		p4.setName("PeppaPig");
+		p4.setLenguaje(Lenguaje.AGRADABLE);
+		p4.setCont(Contenido.FACIL_COMPRENSIBLE);
+		p4.setCategoria(Categoria.INFANTIL);
+		p4.setValores(Valores.SOCIALES);
 		p4.setCriterios(Criterios.INICIO);
 		
 		Pelicula p5 = new Pelicula();
-		p5.setName("Tetanic");
-		p5.setEscena(Escenas.DESNUDEZ);
-		p5.setCategoria(Categoria.PORNOGRAFIA);
+		p5.setName("HarryPopoter");
+		p5.setEscena(Escenas.TENSION_EMOCIONAL);
+		p5.setLenguaje(Lenguaje.AGRADABLE);
+		p5.setCont(Contenido.FACIL_COMPRENSIBLE);
+		p5.setCategoria(Categoria.INFANTIL);
 		p5.setValores(Valores.ESTIMULA_IMAGINACION);
 		p5.setCriterios(Criterios.INICIO);
 		

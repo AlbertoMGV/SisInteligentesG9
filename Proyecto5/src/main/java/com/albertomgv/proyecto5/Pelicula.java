@@ -1,8 +1,5 @@
 package com.albertomgv.proyecto5;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Pelicula {
 	
 	public enum Conductas {		
