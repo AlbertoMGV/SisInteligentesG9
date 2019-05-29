@@ -18,66 +18,62 @@
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>2</factId>
-      <objectToString>* Austin Powers - PEGI[null]
+      <objectToString>* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
    - Practicas: ETNICO
-   - Escenas: DIALOG_EROTICOS
-   - Lenguaje: HIRIENTE
-   - Contenido: HABITUAL_ADULTOS
-   - Valores: SOCIALES
-   - Apologia: DROGAS
-   - Categoria: ADULTOS</objectToString>
+   - Lenguaje: AGRADABLE</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>3</factId>
       <objectToString>* FastandFurius - PEGI[null]
-   - Escenas: INQUIETUD
-   - Lenguaje: HIRIENTE
-   - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Apologia: VIOLENCIA
-   - Categoria: ADULTOS</objectToString>
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>4</factId>
-      <objectToString>* PeppaPig - PEGI[null]
-   - Lenguaje: AGRADABLE
+      <objectToString>* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Categoria: INFANTIL</objectToString>
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>5</factId>
-      <objectToString>* HarryPopoter - PEGI[null]
-   - Escenas: TENSION_EMOCIONAL
-   - Lenguaje: AGRADABLE
+      <objectToString>* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: ESTIMULA_IMAGINACION
-   - Categoria: INFANTIL</objectToString>
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [5]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* HarryPopoter - PEGI[null]
-   - Escenas: TENSION_EMOCIONAL
-   - Lenguaje: AGRADABLE
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: ESTIMULA_IMAGINACION
-   - Categoria: INFANTIL</declarations>
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [4]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* PeppaPig - PEGI[null]
-   - Lenguaje: AGRADABLE
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Categoria: INFANTIL</declarations>
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
@@ -85,26 +81,20 @@
       <activationId>Inicio [3]</activationId>
       <rule>Inicio</rule>
       <declarations>$pelicula=* FastandFurius - PEGI[null]
-   - Escenas: INQUIETUD
-   - Lenguaje: HIRIENTE
-   - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Apologia: VIOLENCIA
-   - Categoria: ADULTOS</declarations>
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [2]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* Austin Powers - PEGI[null]
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
    - Practicas: ETNICO
-   - Escenas: DIALOG_EROTICOS
-   - Lenguaje: HIRIENTE
-   - Contenido: HABITUAL_ADULTOS
-   - Valores: SOCIALES
-   - Apologia: DROGAS
-   - Categoria: ADULTOS</declarations>
+   - Lenguaje: AGRADABLE</declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
@@ -126,65 +116,68 @@
       <type>6</type>
       <activationId>Inicio [5]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* HarryPopoter - PEGI[null]
-   - Escenas: TENSION_EMOCIONAL
-   - Lenguaje: AGRADABLE
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: ESTIMULA_IMAGINACION
-   - Categoria: INFANTIL</declarations>
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>5</factId>
-      <objectToString>* HarryPopoter - PEGI[null]
-   - Escenas: TENSION_EMOCIONAL
-   - Lenguaje: AGRADABLE
+      <objectToString>* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: ESTIMULA_IMAGINACION
-   - Categoria: INFANTIL</objectToString>
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [5]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* HarryPopoter - PEGI[null]
-   - Escenas: TENSION_EMOCIONAL
-   - Lenguaje: AGRADABLE
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: ESTIMULA_IMAGINACION
-   - Categoria: INFANTIL</declarations>
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [4]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* PeppaPig - PEGI[null]
-   - Lenguaje: AGRADABLE
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Categoria: INFANTIL</declarations>
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>4</factId>
-      <objectToString>* PeppaPig - PEGI[null]
-   - Lenguaje: AGRADABLE
+      <objectToString>* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Categoria: INFANTIL</objectToString>
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [4]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* PeppaPig - PEGI[null]
-   - Lenguaje: AGRADABLE
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
    - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Categoria: INFANTIL</declarations>
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
@@ -192,76 +185,58 @@
       <activationId>Inicio [3]</activationId>
       <rule>Inicio</rule>
       <declarations>$pelicula=* FastandFurius - PEGI[null]
-   - Escenas: INQUIETUD
-   - Lenguaje: HIRIENTE
-   - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Apologia: VIOLENCIA
-   - Categoria: ADULTOS</declarations>
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>3</factId>
       <objectToString>* FastandFurius - PEGI[null]
-   - Escenas: INQUIETUD
-   - Lenguaje: HIRIENTE
-   - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Apologia: VIOLENCIA
-   - Categoria: ADULTOS</objectToString>
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [3]</activationId>
       <rule>Inicio</rule>
       <declarations>$pelicula=* FastandFurius - PEGI[null]
-   - Escenas: INQUIETUD
-   - Lenguaje: HIRIENTE
-   - Contenido: FACIL_COMPRENSIBLE
-   - Valores: SOCIALES
-   - Apologia: VIOLENCIA
-   - Categoria: ADULTOS</declarations>
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [2]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* Austin Powers - PEGI[null]
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
    - Practicas: ETNICO
-   - Escenas: DIALOG_EROTICOS
-   - Lenguaje: HIRIENTE
-   - Contenido: HABITUAL_ADULTOS
-   - Valores: SOCIALES
-   - Apologia: DROGAS
-   - Categoria: ADULTOS</declarations>
+   - Lenguaje: AGRADABLE</declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>2</factId>
-      <objectToString>* Austin Powers - PEGI[null]
+      <objectToString>* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
    - Practicas: ETNICO
-   - Escenas: DIALOG_EROTICOS
-   - Lenguaje: HIRIENTE
-   - Contenido: HABITUAL_ADULTOS
-   - Valores: SOCIALES
-   - Apologia: DROGAS
-   - Categoria: ADULTOS</objectToString>
+   - Lenguaje: AGRADABLE</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [2]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=* Austin Powers - PEGI[null]
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
    - Practicas: ETNICO
-   - Escenas: DIALOG_EROTICOS
-   - Lenguaje: HIRIENTE
-   - Contenido: HABITUAL_ADULTOS
-   - Valores: SOCIALES
-   - Apologia: DROGAS
-   - Categoria: ADULTOS</declarations>
+   - Lenguaje: AGRADABLE</declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
@@ -323,6 +298,51 @@
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [2]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [3]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [4]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [5]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [1]</activationId>
       <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
@@ -366,6 +386,143 @@
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [2]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [2]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [3]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>3</factId>
+      <objectToString>* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [3]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [4]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>4</factId>
+      <objectToString>* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [4]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [5]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [5]</activationId>
+      <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [2]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [1]</activationId>
       <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
@@ -379,6 +536,34 @@
    - Apologia: DROGAS
    - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [2]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [2]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
@@ -425,6 +610,178 @@
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [5]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [4]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [3]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [5]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [5]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [4]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>4</factId>
+      <objectToString>* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [4]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [3]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>3</factId>
+      <objectToString>* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Practicas Discriminatorias - Dignidad de las Personas [3]</activationId>
+      <rule>Criterio Practicas Discriminatorias - Dignidad de las Personas</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Lenguaje - Agradable [2]</activationId>
+      <rule>Criterio Lenguaje - Agradable</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Lenguaje - Agradable [2]</activationId>
+      <rule>Criterio Lenguaje - Agradable</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>2</factId>
+      <objectToString>* Toy Story - PEGI[TP]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Lenguaje - Agradable [2]</activationId>
+      <rule>Criterio Lenguaje - Agradable</rule>
+      <declarations>$pelicula=* Toy Story - PEGI[TP]
+   - Conductas: ANTISOCIALES
+   - Practicas: ETNICO
+   - Lenguaje: AGRADABLE</declarations>
+      <factHandleIds>2</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
       <activationId>Criterio Lenguaje - Hiriente [1]</activationId>
       <rule>Criterio Lenguaje - Hiriente</rule>
       <declarations>$pelicula=* Tetanic - PEGI[null]
@@ -480,6 +837,140 @@
    - Apologia: DROGAS
    - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [3]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [4]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [5]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [3]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>3</factId>
+      <objectToString>* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [3]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [4]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>4</factId>
+      <objectToString>* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [4]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [5]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc. [5]</activationId>
+      <rule>Criterio Apologia - No Apologia practicas disc. ni conductas antisoc.</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
@@ -538,6 +1029,232 @@
    - Apologia: DROGAS
    - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Contendio - Comprensible [5]</activationId>
+      <rule>Criterio Contendio - Comprensible</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Contendio - Comprensible [4]</activationId>
+      <rule>Criterio Contendio - Comprensible</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Contendio - Comprensible [5]</activationId>
+      <rule>Criterio Contendio - Comprensible</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Contendio - Comprensible [5]</activationId>
+      <rule>Criterio Contendio - Comprensible</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Contendio - Comprensible [4]</activationId>
+      <rule>Criterio Contendio - Comprensible</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>4</factId>
+      <objectToString>* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Contendio - Comprensible [4]</activationId>
+      <rule>Criterio Contendio - Comprensible</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Contendio - Complejo [3]</activationId>
+      <rule>Criterio Contendio - Complejo</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Contendio - Complejo [3]</activationId>
+      <rule>Criterio Contendio - Complejo</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>3</factId>
+      <objectToString>* FastandFurius - PEGI[MAYOR16]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Contendio - Complejo [3]</activationId>
+      <rule>Criterio Contendio - Complejo</rule>
+      <declarations>$pelicula=* FastandFurius - PEGI[MAYOR16]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: PERJU_DESARR_PSICO
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>3</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Valores - Pedagogicos [5]</activationId>
+      <rule>Criterio Valores - Pedagogicos</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Valores - Pedagogicos [5]</activationId>
+      <rule>Criterio Valores - Pedagogicos</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>5</factId>
+      <objectToString>* Peppa Pig - PEGI[INFANCIA]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Valores - Pedagogicos [5]</activationId>
+      <rule>Criterio Valores - Pedagogicos</rule>
+      <declarations>$pelicula=* Peppa Pig - PEGI[INFANCIA]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PEDAGOGICOS
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>5</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>4</type>
+      <activationId>Criterio Valores - Conducen a Reflexion [4]</activationId>
+      <rule>Criterio Valores - Conducen a Reflexion</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>6</type>
+      <activationId>Criterio Valores - Conducen a Reflexion [4]</activationId>
+      <rule>Criterio Valores - Conducen a Reflexion</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[null]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
+    </org.drools.core.audit.event.ActivationLogEvent>
+    <org.drools.core.audit.event.ObjectLogEvent>
+      <type>2</type>
+      <factId>4</factId>
+      <objectToString>* Harry Popoter - PEGI[MAYOR12]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</objectToString>
+    </org.drools.core.audit.event.ObjectLogEvent>
+    <org.drools.core.audit.event.ActivationLogEvent>
+      <type>7</type>
+      <activationId>Criterio Valores - Conducen a Reflexion [4]</activationId>
+      <rule>Criterio Valores - Conducen a Reflexion</rule>
+      <declarations>$pelicula=* Harry Popoter - PEGI[MAYOR12]
+   - Conductas: ANTISOCIALES
+   - Practicas: ATENT_DIG_PERSONAS
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: PROMUEVE_REFLEXION
+   - Apologia: NO_AP_CONDUCTAS_ANTISOCIALES</declarations>
+      <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
   </events>
 </org.drools.core.audit.WorkingMemoryLog>

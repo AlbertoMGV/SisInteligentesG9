@@ -34,41 +34,36 @@ public class MetodoPrincipal {
 		p1.setCriterios(Criterios.INICIO);
 		
 		Pelicula p2 = new Pelicula();
-		p2.setName("Austin Powers");
-		p2.setEscena(Escenas.DIALOG_EROTICOS);
+		p2.setName("Toy Story");
+		p2.setConducta(Conductas.ANTISOCIALES);
 		p2.setPractica(Practicas_Discri.ETNICO);
-		p2.setLenguaje(Lenguaje.HIRIENTE);
-		p2.setCont(Contenido.HABITUAL_ADULTOS);
-		p2.setApologia(Apologia.DROGAS);
-		p2.setCategoria(Categoria.ADULTOS);
-		p2.setValores(Valores.SOCIALES);
+		p2.setLenguaje(Lenguaje.AGRADABLE);
 		p2.setCriterios(Criterios.INICIO);
 		
 		Pelicula p3 = new Pelicula();
 		p3.setName("FastandFurius");
-		p3.setEscena(Escenas.INQUIETUD);
-		p3.setLenguaje(Lenguaje.HIRIENTE);
-		p3.setCont(Contenido.FACIL_COMPRENSIBLE);
-		p3.setApologia(Apologia.VIOLENCIA);
-		p3.setCategoria(Categoria.ADULTOS);
-		p3.setValores(Valores.SOCIALES);
+		p3.setConducta(Conductas.ANTISOCIALES);
+		p3.setPractica(Practicas_Discri.ATENT_DIG_PERSONAS);
+		p3.setApologia(Apologia.NO_AP_CONDUCTAS_ANTISOCIALES);
+		p3.setCont(Contenido.PERJU_DESARR_PSICO);
 		p3.setCriterios(Criterios.INICIO);
 		
 		Pelicula p4 = new Pelicula();
-		p4.setName("PeppaPig");
-		p4.setLenguaje(Lenguaje.AGRADABLE);
+		p4.setName("Harry Popoter");
+		p4.setConducta(Conductas.ANTISOCIALES);
+		p4.setPractica(Practicas_Discri.ATENT_DIG_PERSONAS);
+		p4.setApologia(Apologia.NO_AP_CONDUCTAS_ANTISOCIALES);
 		p4.setCont(Contenido.FACIL_COMPRENSIBLE);
-		p4.setCategoria(Categoria.INFANTIL);
-		p4.setValores(Valores.SOCIALES);
+		p4.setValores(Valores.PROMUEVE_REFLEXION);
 		p4.setCriterios(Criterios.INICIO);
 		
 		Pelicula p5 = new Pelicula();
-		p5.setName("HarryPopoter");
-		p5.setEscena(Escenas.TENSION_EMOCIONAL);
-		p5.setLenguaje(Lenguaje.AGRADABLE);
+		p5.setName("Peppa Pig");
+		p5.setConducta(Conductas.ANTISOCIALES);
+		p5.setPractica(Practicas_Discri.ATENT_DIG_PERSONAS);
+		p5.setApologia(Apologia.NO_AP_CONDUCTAS_ANTISOCIALES);
 		p5.setCont(Contenido.FACIL_COMPRENSIBLE);
-		p5.setCategoria(Categoria.INFANTIL);
-		p5.setValores(Valores.ESTIMULA_IMAGINACION);
+		p5.setValores(Valores.PEDAGOGICOS);
 		p5.setCriterios(Criterios.INICIO);
 		
 		//Mostramos la info de las peliculas antes del metodo
@@ -99,7 +94,7 @@ public class MetodoPrincipal {
 				
 		//Se insertan los objetos en la KIE Session (Memoria de trabajo)
 		kSession.insert(p1);
-		kSession.insert(p2);
+        kSession.insert(p2);
 		kSession.insert(p3);
 		kSession.insert(p4);
 		kSession.insert(p5);
