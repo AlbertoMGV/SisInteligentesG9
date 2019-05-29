@@ -10,13 +10,14 @@ public class Pelicula {
 		INCIVICAS,
 		ILEGALES,
 		PERJU_DESARRO_PSICO,
-		GRATE_ABUSO
+		GRAVE_ABUSO
 	}
 	
 	public enum Practicas_Discri {		
 		GENERO,
 		ETNICO,
-		SEXUAL
+		SEXUAL,
+		ATENT_DIG_PERSONAS
 	}
 	
 	public enum Escenas {		
@@ -29,7 +30,8 @@ public class Pelicula {
 		DESNUDEZ,
 		DIALOG_EROTICOS,
 		CRUELDAD,
-		INQUIETUD
+		INQUIETUD,
+		VIOLENCIA_EXTREMA
 	}
 	
 	public enum Lenguaje {		
@@ -53,8 +55,8 @@ public class Pelicula {
 	public enum Apologia {		
 		DROGAS,
 		VIOLENCIA,
-		CONDUCTAS_ANTISOCIALES,
-		PRACTICAS_DISCRIMINATORIAS		
+		NO_AP_CONDUCTAS_ANTISOCIALES,
+		NO_AP_PRACTICAS_DISCRIMINATORIAS		
 	}
 	
 	public enum Categoria {		
@@ -70,10 +72,22 @@ public class Pelicula {
 		MAYOR12,
 		MAYOR16,
 		MAYOR18,
-		X
-		
+		X	
 	}
 	
+	public enum Criterios {
+		CONDUCTAS,
+		PRACTICAS_DISCRI,
+		ESCENAS,
+		LENGUAJE, 
+		CONTENIDO,
+		VALORES,
+		APOLOGIA,
+		CATEGORIA,
+		CLASIFICACION,
+		INICIO,
+		FIN
+	}
 	
 	private String name = null;
 	private Conductas conducta=null;
@@ -85,6 +99,7 @@ public class Pelicula {
 	private Apologia apologia=null;
 	private Categoria categoria=null;
 	private Clasificacion clasificacion=null;
+	private Criterios criterios=null;
 	
 	/**
 	 * @return the name
@@ -208,6 +223,12 @@ public class Pelicula {
 		this.clasificacion = clasificacion;
 	}
 	
+	public Criterios getCriterios() {
+		return criterios;
+	}
+	public void setCriterios(Criterios criterios) {
+		this.criterios = criterios;
+	}
 	@Override
 	public String toString() {
 		return "Pelicula [name=" + name + ", conducta=" + conducta + ", practica=" + practica + ", escena=" + escena

@@ -13,6 +13,7 @@ import com.albertomgv.proyecto5.Pelicula.Escenas;
 import com.albertomgv.proyecto5.Pelicula.Lenguaje;
 import com.albertomgv.proyecto5.Pelicula.Practicas_Discri;
 import com.albertomgv.proyecto5.Pelicula.Valores;
+import com.albertomgv.proyecto5.Pelicula.Criterios;
 
 public class MetodoPrincipal {
 
@@ -25,30 +26,35 @@ public class MetodoPrincipal {
 		p1.setEscena(Escenas.DESNUDEZ);
 		p1.setCategoria(Categoria.PORNOGRAFIA);
 		p1.setValores(Valores.ESTIMULA_IMAGINACION);
+		p1.setCriterios(Criterios.INICIO);
 		
 		Pelicula p2 = new Pelicula();
 		p2.setName("Tetanic");
 		p2.setEscena(Escenas.DESNUDEZ);
 		p2.setCategoria(Categoria.PORNOGRAFIA);
 		p2.setValores(Valores.ESTIMULA_IMAGINACION);
+		p2.setCriterios(Criterios.INICIO);
 		
 		Pelicula p3 = new Pelicula();
 		p3.setName("Tetanic");
 		p3.setEscena(Escenas.DESNUDEZ);
 		p3.setCategoria(Categoria.PORNOGRAFIA);
 		p3.setValores(Valores.ESTIMULA_IMAGINACION);
+		p3.setCriterios(Criterios.INICIO);
 		
 		Pelicula p4 = new Pelicula();
 		p4.setName("Tetanic");
 		p4.setEscena(Escenas.DESNUDEZ);
 		p4.setCategoria(Categoria.PORNOGRAFIA);
 		p4.setValores(Valores.ESTIMULA_IMAGINACION);
+		p4.setCriterios(Criterios.INICIO);
 		
 		Pelicula p5 = new Pelicula();
 		p5.setName("Tetanic");
 		p5.setEscena(Escenas.DESNUDEZ);
 		p5.setCategoria(Categoria.PORNOGRAFIA);
 		p5.setValores(Valores.ESTIMULA_IMAGINACION);
+		p5.setCriterios(Criterios.INICIO);
 		
 		//Mostramos la info de las peliculas antes del metodo
 		
