@@ -12,12 +12,14 @@ import com.albertomgv.proyecto5.Pelicula.Escenas
 import com.albertomgv.proyecto5.Pelicula.Lenguaje
 import com.albertomgv.proyecto5.Pelicula.Practicas_Discri
 import com.albertomgv.proyecto5.Pelicula.Valores
+import com.albertomgv.proyecto5.Pelicula.Criterios
+import com.albertomgv.proyecto5.Pelicula.Clasificacion
 
 //declare any global variables here
 
 rule "Inicio" 
 	when 
-		$pelicula : Pelicula (criterios == Crietrios.INICIO)
+		$pelicula : Pelicula (criterios == Criterios.INICIO)
 	then
 		$pelicula.setCriterios(Criterios.CONDUCTAS);
 		update($pelicula);
@@ -70,7 +72,7 @@ rule "Escenas - Violencia verbal, fisica, ansiedad, miedo, dolor..."
 								escena == Escenas.VIOLENCIA_FISICA || escena == Escenas.ANSIEDAD ||
 								escena == Escenas.MIEDO || escena == Escenas.DOLOR || 
 								escena == Escenas.TENSION_EMOCIONAL || escena == Escenas.DESNUDEZ ||
-								escena == Escenas.DIALOG_EROTICOS escena == Escenas.CRUELDAD ||
+								escena == Escenas.DIALOG_EROTICOS || escena == Escenas.CRUELDAD ||
 								escena == Escenas.INQUIETUD)
 	then
 		$pelicula.setCriterios(Criterios.LENGUAJE);
