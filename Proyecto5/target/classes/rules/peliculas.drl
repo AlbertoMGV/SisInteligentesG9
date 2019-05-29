@@ -120,7 +120,7 @@ rule "Criterio Apologia - Droga y Violencia"
 		$pelicula.setClasificacion(Clasificacion.X);
 	//	$pelicula.setCategoria(Categoria.PORNOGRAFIA);
 		$pelicula.setCriterios(Criterios.FIN);
-		System.out.println("- Pelicula: Pelicula X correctamente clasificadas.");
+		System.out.println("- Pelicula X correctamente clasificadas.");
 		update($pelicula);
 end
 
@@ -143,7 +143,7 @@ rule "Criterio Contendio - Complejo"
 	//	$pelicula.setClasificacion(Clasificacion.MAYOR18);
 	//	$pelicula.setCategoria(Categoria.ADULTOS);
 		$pelicula.setCriterios(Criterios.FIN);
-		System.out.println("- Pelicula: No recomendaba para < 16 y < 18 correctamente clasificadas.");
+		System.out.println("- Pelicula no recomendaba para < 16 y < 18 correctamente clasificadas.");
 		update($pelicula);
 end
 
@@ -156,7 +156,7 @@ rule "Criterio Valores - Pedagogicos"
 		$pelicula.setClasificacion(Clasificacion.INFANCIA);
 	//	$pelicula.setCategoria(Categoria.INFANTIL);
 		$pelicula.setCriterios(Criterios.FIN);
-		System.out.println("- Pelicula: Especialmente recomendada para la infancia correctamente clasificada.");
+		System.out.println("- Pelicula especialmente recomendada para la infancia correctamente clasificada.");
 		update($pelicula);
 end
 
@@ -168,7 +168,7 @@ rule "Criterio Valores - Conducen a Reflexion"
 		$pelicula.setClasificacion(Clasificacion.MAYOR12);
 	//	$pelicula.setCategoria(Categoria.ADULTOS);
 		$pelicula.setCriterios(Criterios.FIN);
-		System.out.println("- Pelicula: No recomendada para < 12 correctamente clasificada.");
+		System.out.println("- Pelicula no recomendada para < 12 correctamente clasificada.");
 		update($pelicula);
 end
 
