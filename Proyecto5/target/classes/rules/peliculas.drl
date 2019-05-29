@@ -1,5 +1,5 @@
 //created on: 25-may-2019
-package rules
+package peliculas
 
 //list any import classes here.
 
@@ -15,23 +15,159 @@ import com.albertomgv.proyecto5.Pelicula.Valores
 
 //declare any global variables here
 
+rule "Inicio" 
+	when 
+		$pelicula : Pelicula (criterios == Crietrios.INICIO)
+	then
+		$pelicula.setCriterios(Criterios.CONDUCTAS);
+		update($pelicula);
+end	
 
-
-
-rule "Your First Rule"
-
-    when
-        //conditions
-    then
-        //actions
-
+rule "Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud"
+	when
+		$pelicula : Pelicula (criterios == Criterios.CONDUCTAS,
+								conducta != null, conducta == Conductas.ANTISOCIALES || 
+								conducta == Conductas.INCIVICAS || conducta == Conductas.ILEGALES
+								|| conducta == Conductas.PERJU_DESARRO_PSICO)
+	then
+		$pelicula.setCriterios(Criterios.PRACTICAS_DISCRI);
+		update($pelicula);
 end
 
-rule "Your Second Rule"
-    //include attributes such as "salience" here...
-    when
-        //conditions
-    then
-        //actions
-
+rule "Criterio Conducta - Abuso"
+	when
+		$pelicula : Pelicula (criterios == Criterios.CONDUCTAS,
+								conducta != null, conducta == Conductas.GRAVE_ABUSO)
+	then
+		$pelicula.setCriterios(Criterios.ESCENAS);
+		update($pelicula);
 end
+
+rule "Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual"
+	when
+		$pelicula : Pelicula (criterios == Criterios.PRACTICAS_DISCRI,
+								practica != null, practica == Practicas_Discri.GENERO || 
+								practica == Practicas_Discri.ETNICO || 
+								practica == Practicas_Discri.SEXUAL)
+	then
+		$pelicula.setCriterios(Criterios.LENGUAJE);
+		update($pelicula);
+end
+
+rule "Criterio Practicas Discriminatorias - Dignidad de las Personas"
+	when
+		$pelicula : Pelicula (criterios == Criterios.PRACTICAS_DISCRI,
+								practica != null, practica == Practicas_Discri.ATENT_DIG_PERSONAS)
+	then
+		$pelicula.setCriterios(Criterios.APOLOGIA);
+		update($pelicula);
+end
+
+rule "Escenas - Violencia verbal, fisica, ansiedad, miedo, dolor..."
+	when
+		$pelicula : Pelicula (criterios == Criterios.ESCENAS,
+								escena != null, escena == Escenas.VIOLENCIA_VERBAL || 
+								escena == Escenas.VIOLENCIA_FISICA || escena == Escenas.ANSIEDAD ||
+								escena == Escenas.MIEDO || escena == Escenas.DOLOR || 
+								escena == Escenas.TENSION_EMOCIONAL || escena == Escenas.DESNUDEZ ||
+								escena == Escenas.DIALOG_EROTICOS escena == Escenas.CRUELDAD ||
+								escena == Escenas.INQUIETUD)
+	then
+		$pelicula.setCriterios(Criterios.LENGUAJE);
+		update($pelicula);
+end
+
+rule "Criterio Lenguaje - Agradable"
+	when
+		$pelicula : Pelicula (criterios == Criterios.LENGUAJE,
+								lenguaje != null, lenguaje == Lenguaje.AGRADABLE)
+	then
+		$pelicula.setClasificacion(Clasificacion.TP);
+	//	$pelicula.setClasificacion(Clasificacion.TP);
+	//	$pelicula.setCategoria(Categoria.INFANTIL);
+		$pelicula.setCriterios(Criterios.FIN);
+		System.out.println("- Pelicula: Apta para TP y Mayores de 7 correctamente clasificadas.");
+		update($pelicula);
+end
+
+rule "Criterio Lenguaje - Hiriente"
+	when
+		$pelicula : Pelicula (criterios == Criterios.LENGUAJE,
+								lenguaje != null, lenguaje == Lenguaje.HIRIENTE)
+	then
+		$pelicula.setCriterios(Criterios.APOLOGIA);
+		update($pelicula);
+end
+
+rule "Criterio Apologia - No Apologia practicas disc. ni conductas antisoc."
+	when
+		$pelicula : Pelicula (criterios == Criterios.APOLOGIA,
+								apologia != null, apologia == Apologia.NO_AP_CONDUCTAS_ANTISOCIALES ||
+								apologia == Apologia.NO_AP_PRACTICAS_DISCRIMINATORIAS)
+	then
+		$pelicula.setCriterios(Criterios.CONTENIDO);
+		update($pelicula);
+end
+
+rule "Criterio Apologia - Droga y Violencia"
+	when
+		$pelicula : Pelicula (criterios == Criterios.APOLOGIA,
+								apologia != null, apologia == Apologia.DROGAS ||
+								apologia == Apologia.VIOLENCIA)
+	then
+		$pelicula.setClasificacion(Clasificacion.X);
+	//	$pelicula.setCategoria(Categoria.PORNOGRAFIA);
+		$pelicula.setCriterios(Criterios.FIN);
+		System.out.println("- Pelicula: Pelicula X correctamente clasificadas.");
+		update($pelicula);
+end
+
+rule "Criterio Contendio - Comprensible"
+	when
+		$pelicula : Pelicula (criterios == Criterios.CONTENIDO,
+								cont != null, cont == Contenido.FACIL_COMPRENSIBLE)
+	then
+		$pelicula.setCriterios(Criterios.VALORES);
+		update($pelicula);
+end
+
+rule "Criterio Contendio - Complejo"
+	when
+		$pelicula : Pelicula (criterios == Criterios.CONTENIDO,
+								cont != null, cont == Contenido.PERJU_DESARR_PSICO ||
+								cont == Contenido.HABITUAL_ADULTOS)
+	then
+		$pelicula.setClasificacion(Clasificacion.MAYOR16);
+	//	$pelicula.setClasificacion(Clasificacion.MAYOR18);
+	//	$pelicula.setCategoria(Categoria.ADULTOS);
+		$pelicula.setCriterios(Criterios.FIN);
+		System.out.println("- Pelicula: No recomendaba para < 16 y < 18 correctamente clasificadas.");
+		update($pelicula);
+end
+
+rule "Criterio Valores - Pedagogicos"
+	when
+		$pelicula : Pelicula (criterios == Criterios.VALORES,
+								valores != null, valores == Valores.PEDAGOGICOS ||
+								valores == Valores.SOCIALES || valores == Valores.ESTIMULA_IMAGINACION)
+	then
+		$pelicula.setClasificacion(Clasificacion.INFANCIA);
+	//	$pelicula.setCategoria(Categoria.INFANTIL);
+		$pelicula.setCriterios(Criterios.FIN);
+		System.out.println("- Pelicula: Especialmente recomendada para la infancia correctamente clasificada.");
+		update($pelicula);
+end
+
+rule "Criterio Valores - Conducen a Reflexion"
+	when
+		$pelicula : Pelicula (criterios == Criterios.VALORES,
+								valores != null, valores == Valores.PROMUEVE_REFLEXION)
+	then
+		$pelicula.setClasificacion(Clasificacion.MAYOR12);
+	//	$pelicula.setCategoria(Categoria.ADULTOS);
+		$pelicula.setCriterios(Criterios.FIN);
+		System.out.println("- Pelicula: No recomendada para < 12 correctamente clasificada.");
+		update($pelicula);
+end
+
+

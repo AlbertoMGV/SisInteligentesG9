@@ -1,5 +1,5 @@
 //created on: 25-may-2019
-package rules
+package peliculas
 
 //list any import classes here.
 
@@ -15,7 +15,7 @@ import com.albertomgv.proyecto5.Pelicula.Valores
 
 //declare any global variables here
 
-rule "Inicio"
+rule "Inicio" 
 	when 
 		$pelicula : Pelicula (criterios == Crietrios.INICIO)
 	then

@@ -5,27 +5,27 @@
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>Pelicula [name=titanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>2</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>Pelicula [name=titanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>3</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>Pelicula [name=titanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>4</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>Pelicula [name=titanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>5</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>Pelicula [name=titanic, conducta=null, practica=null, escena=DESNUDEZ, lenguaje=null, cont=null, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
   </events>
 </org.drools.core.audit.WorkingMemoryLog>
