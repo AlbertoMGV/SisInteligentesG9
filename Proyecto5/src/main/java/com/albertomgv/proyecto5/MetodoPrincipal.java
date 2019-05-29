@@ -81,6 +81,9 @@ public class MetodoPrincipal {
 		System.out.println("\n" + p4);
 		System.out.println("\n" + p5);
 		
+		System.out.println("\n\nLISTA DE WARNINGS QUE DAN MIEDITO");
+		System.out.println("----- -- -------- --- --- -------");
+		
         // Instanciamos la factoria de kie
         KieServices kServices = KieServices.Factory.get();
         
@@ -101,8 +104,8 @@ public class MetodoPrincipal {
 		kSession.insert(p4);
 		kSession.insert(p5);
 		
-		//System.out.println("\n\nDURANTE EL PROCESO DE INFERENCIA");
-		//System.out.println("------- -- ------- -- ----------");
+		System.out.println("\n\nDURANTE EL PROCESO DE INFERENCIA");
+		System.out.println("------- -- ------- -- ----------");
 
 		//Se invoca al proceso de inferencia
 		kSession.fireAllRules();
