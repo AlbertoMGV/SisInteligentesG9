@@ -86,8 +86,8 @@ public class MetodoPrincipal {
 		kSession.insert(p4);
 		kSession.insert(p5);
 		
-		System.out.println("\n\nDURANTE EL PROCESO DE INFERENCIA");
-		System.out.println("------- -- ------- -- ----------");
+		//System.out.println("\n\nDURANTE EL PROCESO DE INFERENCIA");
+		//System.out.println("------- -- ------- -- ----------");
 
 		//Se invoca al proceso de inferencia
 		kSession.fireAllRules();
