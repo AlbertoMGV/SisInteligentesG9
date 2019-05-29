@@ -228,9 +228,37 @@ public class Pelicula {
 	}
 	@Override
 	public String toString() {
-		return "Pelicula [name=" + name + ", conducta=" + conducta + ", practica=" + practica + ", escena=" + escena
-				+ ", lenguaje=" + lenguaje + ", cont=" + cont + ", valores=" + valores + ", apologia=" + apologia
-				+ ", categoria=" + categoria + ", clasificacion=" + clasificacion + "]";
+
+		String output = "* "+name+" - PEGI["+clasificacion+"]";
+		
+		if (conducta!=null) {
+			output += "\n   - Conductas: "+conducta;
+		}
+		if (practica!=null) {
+			output += "\n   - Practicas: "+practica;
+		}
+		if (escena!=null) {
+			output += "\n   - Escenas: "+escena;
+		}
+		if (lenguaje!=null) {
+			output += "\n   - Lenguaje: "+lenguaje;
+		}
+		if (cont!=null) {
+			output += "\n   - Contenido: "+cont;
+		}
+		if (valores!=null) {
+			output += "\n   - Valores: "+valores;
+		}
+		if (apologia!=null) {
+			output += "\n   - Apologia: "+apologia;
+		}
+		if (categoria!=null) {
+			output += "\n   - Categoria: "+categoria;
+		}
+		
+	
+		return output;
+		
 	}
 	
 }

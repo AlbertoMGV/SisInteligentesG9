@@ -5,260 +5,538 @@
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>2</factId>
-      <objectToString>Pelicula [name=Austin Powers, conducta=null, practica=ETNICO, escena=DIALOG_EROTICOS, lenguaje=HIRIENTE, cont=HABITUAL_ADULTOS, valores=SOCIALES, apologia=DROGAS, categoria=ADULTOS, clasificacion=null]</objectToString>
+      <objectToString>* Austin Powers - PEGI[null]
+   - Practicas: ETNICO
+   - Escenas: DIALOG_EROTICOS
+   - Lenguaje: HIRIENTE
+   - Contenido: HABITUAL_ADULTOS
+   - Valores: SOCIALES
+   - Apologia: DROGAS
+   - Categoria: ADULTOS</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>3</factId>
-      <objectToString>Pelicula [name=FastandFurius, conducta=null, practica=null, escena=INQUIETUD, lenguaje=HIRIENTE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=VIOLENCIA, categoria=ADULTOS, clasificacion=null]</objectToString>
+      <objectToString>* FastandFurius - PEGI[null]
+   - Escenas: INQUIETUD
+   - Lenguaje: HIRIENTE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Apologia: VIOLENCIA
+   - Categoria: ADULTOS</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>4</factId>
-      <objectToString>Pelicula [name=PeppaPig, conducta=null, practica=null, escena=null, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=null, categoria=INFANTIL, clasificacion=null]</objectToString>
+      <objectToString>* PeppaPig - PEGI[null]
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Categoria: INFANTIL</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>1</type>
       <factId>5</factId>
-      <objectToString>Pelicula [name=HarryPopoter, conducta=null, practica=null, escena=TENSION_EMOCIONAL, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=INFANTIL, clasificacion=null]</objectToString>
+      <objectToString>* HarryPopoter - PEGI[null]
+   - Escenas: TENSION_EMOCIONAL
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: ESTIMULA_IMAGINACION
+   - Categoria: INFANTIL</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [5]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=HarryPopoter, conducta=null, practica=null, escena=TENSION_EMOCIONAL, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=INFANTIL, clasificacion=null]</declarations>
+      <declarations>$pelicula=* HarryPopoter - PEGI[null]
+   - Escenas: TENSION_EMOCIONAL
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: ESTIMULA_IMAGINACION
+   - Categoria: INFANTIL</declarations>
       <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [4]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=PeppaPig, conducta=null, practica=null, escena=null, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=null, categoria=INFANTIL, clasificacion=null]</declarations>
+      <declarations>$pelicula=* PeppaPig - PEGI[null]
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Categoria: INFANTIL</declarations>
       <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [3]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=FastandFurius, conducta=null, practica=null, escena=INQUIETUD, lenguaje=HIRIENTE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=VIOLENCIA, categoria=ADULTOS, clasificacion=null]</declarations>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Escenas: INQUIETUD
+   - Lenguaje: HIRIENTE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Apologia: VIOLENCIA
+   - Categoria: ADULTOS</declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [2]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=Austin Powers, conducta=null, practica=ETNICO, escena=DIALOG_EROTICOS, lenguaje=HIRIENTE, cont=HABITUAL_ADULTOS, valores=SOCIALES, apologia=DROGAS, categoria=ADULTOS, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Austin Powers - PEGI[null]
+   - Practicas: ETNICO
+   - Escenas: DIALOG_EROTICOS
+   - Lenguaje: HIRIENTE
+   - Contenido: HABITUAL_ADULTOS
+   - Valores: SOCIALES
+   - Apologia: DROGAS
+   - Categoria: ADULTOS</declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Inicio [1]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [5]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=HarryPopoter, conducta=null, practica=null, escena=TENSION_EMOCIONAL, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=INFANTIL, clasificacion=null]</declarations>
+      <declarations>$pelicula=* HarryPopoter - PEGI[null]
+   - Escenas: TENSION_EMOCIONAL
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: ESTIMULA_IMAGINACION
+   - Categoria: INFANTIL</declarations>
       <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>5</factId>
-      <objectToString>Pelicula [name=HarryPopoter, conducta=null, practica=null, escena=TENSION_EMOCIONAL, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=INFANTIL, clasificacion=null]</objectToString>
+      <objectToString>* HarryPopoter - PEGI[null]
+   - Escenas: TENSION_EMOCIONAL
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: ESTIMULA_IMAGINACION
+   - Categoria: INFANTIL</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [5]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=HarryPopoter, conducta=null, practica=null, escena=TENSION_EMOCIONAL, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=ESTIMULA_IMAGINACION, apologia=null, categoria=INFANTIL, clasificacion=null]</declarations>
+      <declarations>$pelicula=* HarryPopoter - PEGI[null]
+   - Escenas: TENSION_EMOCIONAL
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: ESTIMULA_IMAGINACION
+   - Categoria: INFANTIL</declarations>
       <factHandleIds>5</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [4]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=PeppaPig, conducta=null, practica=null, escena=null, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=null, categoria=INFANTIL, clasificacion=null]</declarations>
+      <declarations>$pelicula=* PeppaPig - PEGI[null]
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Categoria: INFANTIL</declarations>
       <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>4</factId>
-      <objectToString>Pelicula [name=PeppaPig, conducta=null, practica=null, escena=null, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=null, categoria=INFANTIL, clasificacion=null]</objectToString>
+      <objectToString>* PeppaPig - PEGI[null]
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Categoria: INFANTIL</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [4]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=PeppaPig, conducta=null, practica=null, escena=null, lenguaje=AGRADABLE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=null, categoria=INFANTIL, clasificacion=null]</declarations>
+      <declarations>$pelicula=* PeppaPig - PEGI[null]
+   - Lenguaje: AGRADABLE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Categoria: INFANTIL</declarations>
       <factHandleIds>4</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [3]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=FastandFurius, conducta=null, practica=null, escena=INQUIETUD, lenguaje=HIRIENTE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=VIOLENCIA, categoria=ADULTOS, clasificacion=null]</declarations>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Escenas: INQUIETUD
+   - Lenguaje: HIRIENTE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Apologia: VIOLENCIA
+   - Categoria: ADULTOS</declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>3</factId>
-      <objectToString>Pelicula [name=FastandFurius, conducta=null, practica=null, escena=INQUIETUD, lenguaje=HIRIENTE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=VIOLENCIA, categoria=ADULTOS, clasificacion=null]</objectToString>
+      <objectToString>* FastandFurius - PEGI[null]
+   - Escenas: INQUIETUD
+   - Lenguaje: HIRIENTE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Apologia: VIOLENCIA
+   - Categoria: ADULTOS</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [3]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=FastandFurius, conducta=null, practica=null, escena=INQUIETUD, lenguaje=HIRIENTE, cont=FACIL_COMPRENSIBLE, valores=SOCIALES, apologia=VIOLENCIA, categoria=ADULTOS, clasificacion=null]</declarations>
+      <declarations>$pelicula=* FastandFurius - PEGI[null]
+   - Escenas: INQUIETUD
+   - Lenguaje: HIRIENTE
+   - Contenido: FACIL_COMPRENSIBLE
+   - Valores: SOCIALES
+   - Apologia: VIOLENCIA
+   - Categoria: ADULTOS</declarations>
       <factHandleIds>3</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [2]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=Austin Powers, conducta=null, practica=ETNICO, escena=DIALOG_EROTICOS, lenguaje=HIRIENTE, cont=HABITUAL_ADULTOS, valores=SOCIALES, apologia=DROGAS, categoria=ADULTOS, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Austin Powers - PEGI[null]
+   - Practicas: ETNICO
+   - Escenas: DIALOG_EROTICOS
+   - Lenguaje: HIRIENTE
+   - Contenido: HABITUAL_ADULTOS
+   - Valores: SOCIALES
+   - Apologia: DROGAS
+   - Categoria: ADULTOS</declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>2</factId>
-      <objectToString>Pelicula [name=Austin Powers, conducta=null, practica=ETNICO, escena=DIALOG_EROTICOS, lenguaje=HIRIENTE, cont=HABITUAL_ADULTOS, valores=SOCIALES, apologia=DROGAS, categoria=ADULTOS, clasificacion=null]</objectToString>
+      <objectToString>* Austin Powers - PEGI[null]
+   - Practicas: ETNICO
+   - Escenas: DIALOG_EROTICOS
+   - Lenguaje: HIRIENTE
+   - Contenido: HABITUAL_ADULTOS
+   - Valores: SOCIALES
+   - Apologia: DROGAS
+   - Categoria: ADULTOS</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [2]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=Austin Powers, conducta=null, practica=ETNICO, escena=DIALOG_EROTICOS, lenguaje=HIRIENTE, cont=HABITUAL_ADULTOS, valores=SOCIALES, apologia=DROGAS, categoria=ADULTOS, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Austin Powers - PEGI[null]
+   - Practicas: ETNICO
+   - Escenas: DIALOG_EROTICOS
+   - Lenguaje: HIRIENTE
+   - Contenido: HABITUAL_ADULTOS
+   - Valores: SOCIALES
+   - Apologia: DROGAS
+   - Categoria: ADULTOS</declarations>
       <factHandleIds>2</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Inicio [1]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Inicio [1]</activationId>
       <rule>Inicio</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [1]</activationId>
       <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [1]</activationId>
       <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud [1]</activationId>
       <rule>Criterio Conducta - Antisocilaes, Incivicas, Ilegales y Perj. Salud</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [1]</activationId>
       <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [1]</activationId>
       <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual [1]</activationId>
       <rule>Criterio Practicas Discriminatorias - Genero, Etnia y Orientacion Sexual</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Criterio Lenguaje - Hiriente [1]</activationId>
       <rule>Criterio Lenguaje - Hiriente</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Criterio Lenguaje - Hiriente [1]</activationId>
       <rule>Criterio Lenguaje - Hiriente</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</objectToString>
+      <objectToString>* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Criterio Lenguaje - Hiriente [1]</activationId>
       <rule>Criterio Lenguaje - Hiriente</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>4</type>
       <activationId>Criterio Apologia - Droga y Violencia [1]</activationId>
       <rule>Criterio Apologia - Droga y Violencia</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>6</type>
       <activationId>Criterio Apologia - Droga y Violencia [1]</activationId>
       <rule>Criterio Apologia - Droga y Violencia</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=null]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[null]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
     <org.drools.core.audit.event.ObjectLogEvent>
       <type>2</type>
       <factId>1</factId>
-      <objectToString>Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=X]</objectToString>
+      <objectToString>* Tetanic - PEGI[X]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</objectToString>
     </org.drools.core.audit.event.ObjectLogEvent>
     <org.drools.core.audit.event.ActivationLogEvent>
       <type>7</type>
       <activationId>Criterio Apologia - Droga y Violencia [1]</activationId>
       <rule>Criterio Apologia - Droga y Violencia</rule>
-      <declarations>$pelicula=Pelicula [name=Tetanic, conducta=ILEGALES, practica=SEXUAL, escena=DESNUDEZ, lenguaje=HIRIENTE, cont=PERJU_DESARR_PSICO, valores=ESTIMULA_IMAGINACION, apologia=DROGAS, categoria=PORNOGRAFIA, clasificacion=X]</declarations>
+      <declarations>$pelicula=* Tetanic - PEGI[X]
+   - Conductas: ILEGALES
+   - Practicas: SEXUAL
+   - Escenas: DESNUDEZ
+   - Lenguaje: HIRIENTE
+   - Contenido: PERJU_DESARR_PSICO
+   - Valores: ESTIMULA_IMAGINACION
+   - Apologia: DROGAS
+   - Categoria: PORNOGRAFIA</declarations>
       <factHandleIds>1</factHandleIds>
     </org.drools.core.audit.event.ActivationLogEvent>
   </events>
